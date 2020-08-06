@@ -1,8 +1,8 @@
 #blue-bar {
-    /* text-align: center; */
+    text-align: center;
     background-color: #194997;
-    width: 100%;
-    margin: -6px;
+    width: 2000px;
+    margin-top: -6px;
     padding: 5px;
 }
 
@@ -11,7 +11,6 @@
 }
 
 #blue-font {
-    width: 100%;
     font-family: sans-serif;
     font-weight:bold;
     font-size: 18px;
@@ -21,30 +20,27 @@
 
 #blue-form {
     outline: none;
-    width: 35%;
-    padding: 7px;
+    width: 550px;
+    padding: 5px;
     border-radius: 6px;
-    margin: -2px 0px -2px 20px;
+    margin: -2px 760px -2px 20px;
 }
 
 #login-font{
-    width: 100%;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 14px;
     color: white;
-    padding: 10px 0px 10px 800px; 
+    padding: 10px 1px 10px 4px; 
 }
 
 #form-signup {
-    width: 25%;
+    width: 450px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-style: outset;
+    border: 1px hidden #ccc;
+    /* border-style: inset; */
     display: block;
     margin: 0 auto;
-    top: 55%;
-    left: 50%;
     background-color: #f2f2f2c2;
     /* position: absolute; */
     /* transform: translate(-50%, -50%); */
@@ -63,7 +59,7 @@
 
 label {
     font-weight: bold;
-    margin: 90px;
+    margin: 70px;
 }
 
 #fname, #lname, #pass, #pass-confirm {
@@ -89,7 +85,7 @@ input[type=submit] {
 
 #dropdown, #dropdown-label {
     display: inline;
-    margin-left: 90px;
+    margin-left: 70px;
 }
 
 #dropdown {
@@ -102,11 +98,11 @@ select {
 }
 
 #gender {
-    margin-left: 90px;
+    margin-left: 70px;
 }
 
 #topic {
-    margin-left: 90px;
+    margin-left: 70px;
 }
 
 
