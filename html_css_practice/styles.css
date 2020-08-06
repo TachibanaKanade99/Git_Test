@@ -2,8 +2,8 @@
     text-align: center;
     background-color: #194997;
     width: 100%;
-    margin: 0px 0px 0px 0px;
-    padding: 5px 0px 10px 0px;
+    margin: -8px -8px;
+    padding: 8px;
 }
 
 #blue-font, #blue-form, #login-font {
@@ -16,14 +16,14 @@
     font-weight:bold;
     font-size: x-large;
     color: white;
-    margin: 0 0 0 0;
+    padding-left: 20%;
+    padding: 50px;
 }
 
 #search-form {
     outline: none;
-    width: 40%;
-    padding: 4px 5px 4px 15px;
-    margin: 0 0 0 0;
+    width: 55%;
+    padding: 6px;
 }
 
 #login-font{
@@ -32,7 +32,8 @@
     font-weight: bold;
     font-size: large;
     color: white;
-    margin: 0 0 0 10cm;  
+    float: right;
+    padding: 5px;  
 }
 
 #form-signup {
@@ -40,11 +41,12 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-style: outset;
-    display: inline-block;
-    position: absolute;
+    /* position: absolute; */
+    /* transform: translate(-50%, -50%); */
+    display: block;
+    margin: 0 auto;
     top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #f2f2f2c2;
 }
 
@@ -62,7 +64,7 @@ label {
 #fname, #lname, #pass, #pass-confirm {
     outline: none;
     width: 100%;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 6px;
     margin: 5px 10px 5px 5px;
     display: inline-block;
     border: 1px solid #ccc;
