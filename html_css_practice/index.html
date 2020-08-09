@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <script src="jquery/jquery.js"></script> -->
+    <!-- <script src="../../../../../../../home/tuanminh/Downloads/jquery-validation-1.19.2/dist/jquery.validate.js"></script> -->
+    <!-- <script src="../../../../../../../home/tuanminh/Downloads/jquery-validation-1.19.2/dist/additional-methods.js"></script> -->
+
+    <!-- Jquery and Jquery Validation Form CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.js"></script>
 </head>
 <body>
     <div id="blue-bar">
         <!-- <div id="blue-font">
             Fotobook
         </div> -->
-        <p id="blue-font">Fotobook</p>
+        <a href="./index.html" id="blue-font">Fotobook</a>
 
         <!-- <div id="blue-form">
             <input type="text" id="search-form" placeholder="Enter Photo / Album">
@@ -26,13 +34,15 @@
 
     <br>
     <h1 id="signup-font">Fotobook Signup</h1>
-    <div id="form-signup">
-        <form>
-            <label for="fname">First Name:</label><br><br>
-            <input type="text" id="fname" name="fname" placeholder="First Name"><br>
+    <div id="signup-div">
+        <form id="form-signup">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" class="signup-text" name="fname" placeholder="First Name (at least 2 characters)">
+            <span class="error-message"></span><br><br>
 
-            <label for="lname">Last Name:</label><br><br>
-            <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" class="signup-text" name="lname" placeholder="Last Name (at least 2 characters)">
+            <span class="error-message"></span><br><br>
             
             <div id="dropdown-label">
                 <b>Select Country:</b>
@@ -45,23 +55,35 @@
             </div>
             <br><br>
             
-            <label for="gender">Select Gender:</label><br><br>
-            <input type="radio" id="gender" name="gender" value="male">Male<br><br>
-            <input type="radio" id="gender" name="gender" value="female">Female<br><br>
+            <label for="gender">Select Gender:</label>
+            <br><br>
+            <input type="radio" id="gender" name="gender" value="male">Male
+            <span class="error-message"></span><br><br>
+            <input type="radio" id="gender" name="gender" value="female">Female
+            <span class="error-message"></span><br><br>
 
-            <label for="topic">Topic Cares:</label><br><br>
-            <input type="checkbox" id="topic" name="topic" value="fashion">Fashion<br><br>
-            <input type="checkbox" id="topic" name="topic" value="news">News<br><br>
-            <input type="checkbox" id="topic" name="topic" value="sports">Sports<br><br>
+            <label for="topic">Topic Cares:</label>
+            <br><br>
+            <input type="checkbox" id="topic" name="topic" value="fashion">Fashion
+            <span class="error-message"></span><br><br>
+            <input type="checkbox" id="topic" name="topic" value="news">News
+            <span class="error-message"></span><br><br>
+            <input type="checkbox" id="topic" name="topic" value="sports">Sports
+            <span class="error-message"></span><br><br>
 
-            <label for="pass">New Password:</label><br><br>
-            <input type="password" id="pass" name="pass" placeholder="Password"><br>
+            <label for="pass">New Password:</label>
+            <input type="password" id="pass" class="signup-text" name="pass" placeholder="Password (at least 8 characters)">
+            <span class="error-message"></span><br><br>
             
-            <label for="pass-confirm">Password Confirmation</label><br><br>
-			<input type="password" id="pass-confirm" name="pass-confirm" placeholder="Password"><br>
+            <label for="pass-confirm">Password Confirmation</label>
+            <input type="password" id="pass-confirm" class="signup-text" name="pass_confirm" placeholder="Password (at least 8 characters)">
+            <span class="error-message"></span><br><br>
 			
-            <input type="submit" value="Signup">
+            <input type="submit" value="Signup" id="submitBtn" class="disabled">
         </form>
     </div>
+    
+    <!-- Javascript File -->
+    <script src="src.js"></script>
 </body>
 </html>
