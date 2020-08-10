@@ -73,8 +73,12 @@ $(document).ready(function(){
 			} 
 		},
 		click: function(event){
-			// event.preventDefault();
-			alert("Signup Successfully! " + form.valid());
+			if (form.valid()){
+				alert("Signup Successfully!");
+			}
+			else {
+				alert("Signup Failed!");
+			}
 		}
 	});
 });
