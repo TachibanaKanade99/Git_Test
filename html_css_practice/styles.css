@@ -62,7 +62,7 @@
 .error-message {
     /* background-color: blue; */
     background: url(unchecked.gif) no-repeat 6px 4px;
-    margin-left: 70px;
+    margin-left: 65px;
     color: #EA5200;
     padding: 3px;
 }
