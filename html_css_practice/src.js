@@ -3,7 +3,8 @@
 // });
 
 $(document).ready(function(){
-    $("#form-signup").validate({
+	var form = $("#form-signup")
+    form.validate({
         rules: {
             fname: {
                 required: true,
@@ -61,15 +62,20 @@ $(document).ready(function(){
 		}
     });
 	
-    let validated = $("#form-signup").valid();
-	if (validated){
-		$("#submitBtn").removeClass("disabled")
-	}
-	else {
-		$("#submitBtn").addClass("disabled")
-	}    
-    $("#submitBtn").on("click", function(){
-        alert("Signup Successfully!");
-    });
+	var submit = $("#submitBtn");
+	submit.on({
+		mouseenter: function(){
+			if (form.valid()){
+				submit.removeClass("disabled")
+			}
+			else {
+				submit.addClass("disabled")
+			} 
+		},
+		click: function(event){
+			// event.preventDefault();
+			alert("Signup Successfully! " + form.valid());
+		}
+	});
 });
 
