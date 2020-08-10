@@ -61,8 +61,10 @@
 
 .error-message {
     /* background-color: blue; */
-    color: red;
-    padding: 2px;
+    background: url(unchecked.gif) no-repeat 6px 4px;
+    margin-left: 70px;
+    color: #EA5200;
+    padding: 3px;
 }
 
 #signup-font {
@@ -83,8 +85,7 @@ label {
 label[id$="-error"] {
     font-weight: bold;
     font-size: 17px;
-    margin: 50px;
-    padding-left: 18px;
+    margin: 20px;
 }
 
 .signup-text {
@@ -92,7 +93,7 @@ label[id$="-error"] {
     width: 70%;
     padding: 13px 0px 13px 14px;
     display: block;
-    margin: 7px auto;
+    margin: 10px auto;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -106,7 +107,7 @@ label[id$="-error"] {
     font-size: 15px;
     text-align: center;
     padding: 11px 20px 11px 20px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: block;
 }
 
