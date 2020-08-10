@@ -63,13 +63,15 @@ $(document).ready(function(){
     });
 	
 	var submit = $("#submitBtn");
+	var error_message = $("span.error-message");
 	submit.on({
 		mouseenter: function(){
 			if (form.valid()){
 				submit.removeClass("disabled")
 			}
 			else {
-				submit.addClass("disabled")
+				submit.addClass("disabled");
+				error_message.hide();
 			} 
 		},
 		click: function(event){
@@ -78,6 +80,9 @@ $(document).ready(function(){
 			}
 			else {
 				alert("Signup Failed!");
+				error_message.show();
+				// prevent the form from submitting
+				event.preventDefault();
 			}
 		}
 	});
