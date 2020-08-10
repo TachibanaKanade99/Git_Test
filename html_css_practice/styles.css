@@ -60,7 +60,7 @@
 }
 
 .error-message {
-    /* background-color: red; */
+    /* background-color: blue; */
     color: red;
     padding: 2px;
 }
@@ -78,6 +78,13 @@ label {
     font-weight: bold;
     font-size: 17px;
     margin: 70px;
+}
+
+label[id$="-error"] {
+    font-weight: bold;
+    font-size: 17px;
+    margin: 50px;
+    padding-left: 18px;
 }
 
 .signup-text {
