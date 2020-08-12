@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Exercise - TuanPM</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- JQuery, Popper and Bootstrap CDNs -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="src.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row pt-3">
+            <div class="text-muted col-md-3 pt-3">
+                Subscribe
+            </div>
+            <div class="col-md-6 mx-auto">
+                <div class="text-center display-4">
+                    <h2>Large</h2>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class=" btn btn-outline-secondary border-0 mt-2 offset-md-6">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </button>
+                <button type="button" class="btn btn-outline-secondary mt-2">Signup</button>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="col-md-1 text-muted">World</div>
+            <div class="col-md-1 text-muted">U.S</div>
+            <div class="col-md-1 text-muted">Technology</div>
+            <div class="col-md-1 text-muted">Design</div>
+            <div class="col-md-1 text-muted">Culture</div>
+            <div class="col-md-1 text-muted">Business</div>
+            <div class="col-md-1 text-muted">Politics</div>
+            <div class="col-md-1 text-muted">Opinion</div>
+            <div class="col-md-1 text-muted">Science</div>
+            <div class="col-md-1 text-muted">Health</div>
+            <div class="col-md-1 text-muted">Style</div>
+            <div class="col-md-1 text-muted">Travel</div>
+        </div>
+
+        <div class="jumbotron bg-dark text-white p-4 mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+                    <p class="lead">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+                    <hr class="my-2">
+                    <p>Continue reading...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 mt-4 border p-4">
+                <p class="text-primary font-weight-bold">World</p>
+                <p class="h4 font-weight-bolder">Featured post</p>
+                <p class="text-muted">Nov 12</p>
+                <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <!-- <a href="#exampleModal1" class="text-primary" id="modal_1">Continue reading</a> -->
+                <a href="#" class="text-primary" data-toggle="modal" data-target="#exampleModal1">Continue reading</a>
+            </div>
+
+            <!-- Modal 1 -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Featured post</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            This is a wider card with supporting text below as a natural lead-in to additional content.
+                            <p class="font-weight-bold font-italic">This modal will load using Bootstrap</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2 mt-4 bg-secondary text-white d-flex justify-content-center">
+                <div class="align-self-center">Thumbnail</div>
+            </div>
+            <div class="col-4 mt-4 border p-4">
+                <p class="text-success font-weight-bold">Design</p>
+                <p class="h4 font-weight-bolder">Post Title</p>
+                <p class="text-muted">Nov 11</p>
+                <p>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <a href="#exampleModal2" class="text-primary" id="modal_2">Continue reading</a>
+            </div>
+
+            <!-- Modal 2 -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Post Title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            This is a wider card with supporting text below as a natural lead-in to additional content.
+                            <p class="font-weight-bold font-italic">This modal will load using JQuery bind() to bind to the modal and will be triggered when click to the link</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2 mt-4 bg-secondary text-white d-flex justify-content-center">
+                <div class="align-self-center">Thumbnail</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="h3 font-weight-bolder font-italic p-4 mt-4">From the Firehose</div>
+                <hr>
+                <div class="h1 font-weight-bolder">Sample blog post</div>
+                <div class="text-secondary">January 1, 2014 by <span class="text-primary">Mark</span></div>
+                <div class="p-1">This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</div>
+                <hr>
+
+                <div class="m-2">Cum sociis natoque penatibus et magnis <span class="text-primary"><u>dis parturient montes</u></span>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+                <br>
+
+                <div class="m-2">Curabitur blandit tempus porttitor. <b>Nullam quis risus eget urna mollis</b> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+                <br>
+
+                <div class="m-2">Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</div>
+                <br>
+
+                <div class="h1 font-weight-bolder">Heading</div>
+                <div class="m-2">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</div>
+                <br>
+                <div class="h2 font-weight-bold">Sub-heading</div>
+                <div class="m-2">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+                <div class="m-2"><code class="text-dark pt-4 pb-4">Example code block</code></div>
+                <div class="m-2">Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</div>
+
+                <div class="h2 font-weight-bolder">Sub-heading</div>
+                <div class="m-2">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+                <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                </ul>
+                <div class="m-2">Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</div>
+                <ol>
+                    <li>Vestibulum id ligula porta felis euismod semper.</li>
+                    <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                    <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                </ol>
+                <div class="m-2">Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</div>
+
+                <br><br>
+                <div class="h1 font-weight-bolder">Another blog post</div>
+                <div class="text-secondary">December 23, 2013 by <span class="text-primary">Jacob</span></div>
+
+                <div class="m-2">Cum sociis natoque penatibus et magnis <u class="text-primary">dis parturient montes</u>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</div>
+                <div class="m-2">Curabitur blandit tempus porttitor. <span class="text-weight-bold">Nullam quis risus eget urna mollis</span> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+                <div class="m-2">Etiam porta sem <span class="text-italic">malesuada magna</span> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</div>
+                <div class="m-2">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</div>
+
+                <br><br>
+                <div class="h1 font-weight-bolder">New feature</div>
+                <div class="text-secondary">December 14, 2013 by <span class="text-primary">Chris</span></div>
+                <div class="m-2">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</div>
+                <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                </ul>
+                <div class="m-2">Etiam porta sem <span class="text-italic">malesuada magna</span> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</div>
+                <div class="m-2">Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</div>
+
+                <button type="button" class="btn btn-outline-primary mt-5 ml-2 mb-5 rounded-pill">Older</button>
+                <button type="button" class="btn btn-outline-secondary mt-5 mb-5 rounded-pill">Newer</button>
+            </div>
+            <div class="col-md-4">
+                <div class=" p-4 bg-light mt-5 ml-3">
+                    <div class="h4 font-weigth-bolder font-italic">About</div>
+                    <div>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</div>
+                </div>
+
+                <div class="h4 font-weigth-bolder font-italic mt-5 ml-5">Archives</div>
+                <div class="text-primary ml-5">
+                    <div>March 2014</div>
+                    <div>February 2014</div>
+                    <div>January 2014</div>
+                    <div>December 2013</div>
+                    <div>November 2013</div>
+                    <div>October 2013</div>
+                    <div>Sedivtember 2013</div>
+                    <div>August 2013</div>
+                    <div>July 2013</div>
+                    <div>June 2013</div>
+                    <div>May 2013</div>
+                    <div>Adivril 2013</div>
+                </div>
+
+                <div class="h4 font-weigth-bolder font-italic mt-5 ml-5">Elsewhere</div>
+                <div class="text-primary ml-5">
+                    <div>Github</div>
+                    <div>Twitter</div>
+                    <div>Facebook</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row bg-light ml-5 justify-content-center">
+        <div class="text-muted p-3">Blog template built for <span class="text-primary">Bootstrap</span> by <span class="text-primary">@mdo</span>.</div>
+        <div class="w-100"></div>
+        <div class="align-self-center pb-3 mb-4">
+            <a href="#">Back to Top</a>
+        </div>
+    </div>
+</body>
+
+</html>
