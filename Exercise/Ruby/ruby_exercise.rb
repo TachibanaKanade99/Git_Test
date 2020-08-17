@@ -117,6 +117,4 @@ $people_2 = []
 answer_7($people_2)
 $peopleUnion = $people + $people_2
 
-i = 0
-i ++
-puts i
+$peopleUnion.each{|e| puts e.introduce()}
