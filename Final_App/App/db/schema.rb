@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_160121) do
+ActiveRecord::Schema.define(version: 2020_08_18_063025) do
 
   create_table "album_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", limit: 140, null: false
@@ -24,11 +24,15 @@ ActiveRecord::Schema.define(version: 2020_08_17_160121) do
     t.string "sharing_mode", null: false
   end
 
-  create_table "usertables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "user_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "first_name", limit: 25, null: false
     t.string "last_name", limit: 25, null: false
     t.string "email", null: false
     t.string "password", limit: 64, null: false
+    t.index ["email"], name: "index_user_tables_on_email", unique: true
+    t.index ["first_name"], name: "index_user_tables_on_first_name"
+    t.index ["last_name"], name: "index_user_tables_on_last_name"
+    t.index ["password"], name: "index_user_tables_on_password"
   end
 
 end
