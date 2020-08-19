@@ -3,6 +3,10 @@ class UserTable < ApplicationRecord
 		maximum: 25,
 		presence: true,
 		too_long: "maximum 25 characters long"
+	},
+	format: { 
+		with: /\A[a-zA-Z]+\z/,
+		message: "only alows characters"
 	}
 
 	validates :email, length: {
@@ -10,7 +14,11 @@ class UserTable < ApplicationRecord
 		presence: true,
 		too_long: "maximum 255 characters long"
 	},
-	uniqueness: {case_sensitive: true}
+	uniqueness: {
+		case_sensitive: true,
+		message: "this email has already been taken"
+	},
+	email: true # for validate email
 
 	validates :password, length: {
 		maximum: 64,
