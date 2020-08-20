@@ -10,29 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_18_063025) do
+ActiveRecord::Schema.define(version: 2020_08_20_045812) do
 
-  create_table "album_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "title", limit: 140, null: false
+    t.string "description", limit: 300, null: false
+    t.string "sharing_mode", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_albums_on_user_id"
+  end
+
+  create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", limit: 140, null: false
     t.string "description", limit: 300, null: false
     t.string "sharing_mode", null: false
   end
 
-  create_table "photo_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "title", limit: 140, null: false
-    t.string "description", limit: 300, null: false
-    t.string "sharing_mode", null: false
-  end
-
-  create_table "user_tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "first_name", limit: 25, null: false
     t.string "last_name", limit: 25, null: false
     t.string "email", null: false
     t.string "password", limit: 64, null: false
-    t.index ["email"], name: "index_user_tables_on_email", unique: true
-    t.index ["first_name"], name: "index_user_tables_on_first_name"
-    t.index ["last_name"], name: "index_user_tables_on_last_name"
-    t.index ["password"], name: "index_user_tables_on_password"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["first_name"], name: "index_users_on_first_name"
+    t.index ["last_name"], name: "index_users_on_last_name"
+    t.index ["password"], name: "index_users_on_password"
   end
 
+  add_foreign_key "albums", "users"
 end
