@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+
+	# Active Record Validation
 	validates :first_name, :last_name, length: {
 		maximum: 25,
 		presence: true,
@@ -25,4 +27,8 @@ class User < ApplicationRecord
 		presence: true,
 		too_long: "maximum 64 characters long"
 	}
+
+	# Active Record Association
+	has_many :albums, dependent: :destroy
+	has_many :photos, dependent: :destroy
 end
