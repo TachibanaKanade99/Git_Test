@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Google Roboto Font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<!-- add after bootstrap.min.css -->
+		<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.3.0/dist/bootstrap-toc.min.css">
+		<link rel="stylesheet" href="style.css">
+
+		<title>Fotobook - Signup</title>
+	</head>
+	<body data-spy="scroll" data-target="#toc">
+
+		<nav class="navbar navbar-expand-lg fixed-top navbar-dark ft-navbar">
+			<div class="col-xs-1 col-md-2 text-right">
+				<a class="navbar-brand ft-name font-weight-bold" href="#">Fotobook</a>
+			</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="col-md-5 mr-auto px-0">
+					<div class="input-group input-group-sm">
+						<input class="form-control" type="search" role="search" placeholder="Search Photo / Album" aria-label="Search">
+					</div>
+				</div>
+				
+				<div class="col-xs-6 col-md-1 text-center">
+					<a class="navbar-brand" href="#">
+						<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
+						<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+					</a>
+				</div>
+	
+				<div class="col-xs-6 col-md-2 text-center">
+					<a class="navbar-brand font-weight-bold ft-login" href="#">Logout</a>
+				</div>
+			</div>	
+		</nav>
+
+		<div class="container-fluid ft-mainpage">
+			<div class="row">
+				<div class="col-xs-1 col-md-2 mt-4">
+					<nav class="ft-sticky-top text-center" id="toc" data-toggle="toc">
+						<ul class="nav navbar-nav">
+							<a class="nav-link content-text" href="#">Feeds</a>
+						</ul>
+	
+						<ul class="nav navbar-nav">
+							<a class="nav-link content-text" href="#">My Photos</a>
+						</ul>
+	
+						<ul class="nav navbar-nav">
+							<a class="nav-link content-text" href="#">My Albums</a>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="col-xs-6 col-md-8 bg-white mt-3">
+					<div class="row">
+						<div class="btn-group mx-auto m-3">
+							<button type="button" class="btn active ft-button">
+								PHOTO
+							</button>
+	
+							<button type="button" class="btn ft-button">
+								ALBUM
+							</button>
+						</div>
+					</div>
+
+					<!-- Photo Modal -->
+					<div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h5 class="modal-title" id="photo-modal">Nam tempor posuere faucibus</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+								<div class="modal-body">
+									<img class="img-fluid card-img" src="desktop.jpg" alt="Card image cap">
+								</div>
+								<div class="modal-footer">
+									<p>Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-3 col-md-6 ft-photo">
+							<div class="card border-light">
+								<div class="row py-0 card-body">
+									<img class="col-xs-3 col-md-6 p-0 img-fluid card-img" src="desktop.jpg" alt="Card image cap">
+									<div class="col-xs-3 col-md-6">
+										<div class="card-title">
+											<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
+											<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+											<a href="#" class="stretched-link text-dark" data-toggle="modal" data-target="#photo-modal"><p><strong>Nam tempor posuere faucibus</strong></p></a>
+										</div>
+										<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+										<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
+										<span class="offset-md-5 font-italic ft-date">4:56 pm 01/04/2018</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xs-3 col-md-6 ft-photo">
+							<div class="card border-light">
+								<div class="row py-0 card-body">
+									<img class="col-xs-3 col-md-6 p-0 img-fluid card-img" src="desktop.jpg" alt="Card image cap">
+									<div class="col-xs-3 col-md-6">
+										<div class="card-title">
+											<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
+											<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+											<a href="#" class="stretched-link text-dark" data-toggle="modal" data-target="#photo-modal"><p><strong>Nam tempor posuere faucibus</strong></p></a>
+										</div>
+										<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+										<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
+										<span class="offset-md-5 font-italic ft-date">4:56 pm 01/04/2018</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-3 col-md-6 ft-photo">
+							<div class="card border-light">
+								<div class="row py-0 card-body">
+									<img class="col-xs-3 col-md-6 p-0 img-fluid card-img" src="desktop.jpg" alt="Card image cap">
+									<div class="col-xs-3 col-md-6">
+										<div class="card-title">
+											<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
+											<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+											<a href="#" class="stretched-link text-dark" data-toggle="modal" data-target="#photo-modal"><p><strong>Nam tempor posuere faucibus</strong></p></a>
+										</div>
+										<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+										<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
+										<span class="offset-md-5 font-italic ft-date">4:56 pm 01/04/2018</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xs-3 col-md-6 ft-photo">
+							<div class="card border-light">
+								<div class="row py-0 card-body">
+									<img class="col-xs-3 col-md-6 p-0 img-fluid card-img" src="desktop.jpg" alt="Card image cap">
+									<div class="col-xs-3 col-md-6">
+										<div class="card-title">
+											<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
+											<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+											<a href="#" class="stretched-link text-dark" data-toggle="modal" data-target="#photo-modal"><p><strong>Nam tempor posuere faucibus</strong></p></a>
+										</div>
+										<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+										<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
+										<span class="offset-md-5 font-italic ft-date">4:56 pm 01/04/2018</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-3 col-md-6 ft-photo">
+							<div class="card border-light">
+								<div class="row py-0 card-body">
+									<img class="col-xs-3 col-md-6 p-0 img-fluid card-img" src="desktop.jpg" alt="Card image cap">
+									<div class="col-xs-3 col-md-6">
+										<div class="card-title">
+											<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
+											<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+											<a href="#" class="stretched-link text-dark" data-toggle="modal" data-target="#photo-modal"><p><strong>Nam tempor posuere faucibus</strong></p></a>
+										</div>
+										<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+										<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
+										<span class="offset-md-5 font-italic ft-date">4:56 pm 01/04/2018</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xs-3 col-md-6 ft-photo">
+							<div class="card border-light">
+								<div class="row py-0 card-body">
+									<img class="col-xs-3 col-md-6 p-0 img-fluid card-img" src="desktop.jpg" alt="Card image cap">
+									<div class="col-xs-3 col-md-6">
+										<div class="card-title">
+											<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
+											<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+											<a href="#" class="stretched-link text-dark" data-toggle="modal" data-target="#photo-modal"><p><strong>Nam tempor posuere faucibus</strong></p></a>
+										</div>
+										<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+										<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
+										<span class="offset-md-5 font-italic ft-date">4:56 pm 01/04/2018</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<nav aria-label="Page navigation example">
+						<ul class="pagination m-3 justify-content-center">
+						  <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+						  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+						  <li class="page-item"><a class="page-link" href="#">2</a></li>
+						  <li class="page-item"><a class="page-link" href="#">3</a></li>
+						  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+						</ul>
+					</nav>
+
+				</div>
+
+				<div class="col-xs-1 col-md-2">
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	
+
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/1fb1fb2be8.js" crossorigin="anonymous"></script>
+
+		<!-- Optional JavaScript -->
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<!-- add after bootstrap.min.js -->
+		<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.3.0/dist/bootstrap-toc.min.js"></script>
+
+		<script src="src.js"></script>
+	</body>
+</html>
