@@ -10,6 +10,15 @@
     background-color: #F8F8F8;
 }
 
+.hmm {
+    height: 150vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 .ft-navbar {
 	font-family: Roboto;
@@ -32,6 +41,11 @@
     font-weight: 600;
 }
 
+.ft-back-btn {
+    background-color: #3C5999;
+    color: white;
+}
+
 .ft-button:hover, .ft-button:active {
     background-color: #3C5999;
     color: white;
@@ -47,6 +61,55 @@
     border: none;
     background-color: white;
     color: #3C5999;
+}
+
+.photo-btn {
+    background-color: #f7f7f7;
+    color: gray;
+    border: 2px dashed gray;
+    padding: 50px;
+}
+
+.square {
+    font-size: 14px;    
+    width: 13vw;
+    height: 10vw;
+}
+.square h1 {
+    color: #fff;
+}
+
+.top-left {
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    font-family: Roboto;
+}
+
+.top-right {
+    position: absolute;
+    color: black;
+    left: 45%;
+}
+
+.top-right:hover {
+    position: absolute;
+    color: white;
+    left: 45%;
+}
+
+.top-left:hover {
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    font-family: Roboto;
+    opacity: 0.6;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 20px;
+    right: 17px;
 }
 
 .ft-date {
