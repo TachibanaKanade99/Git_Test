@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_21_092546) do
+ActiveRecord::Schema.define(version: 2020_08_25_044652) do
 
   create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", limit: 140, null: false
     t.string "description", limit: 300, null: false
     t.string "sharing_mode", null: false
     t.bigint "user_id", null: false
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["user_id"], name: "index_albums_on_user_id"
   end
 
@@ -25,11 +27,28 @@ ActiveRecord::Schema.define(version: 2020_08_21_092546) do
     t.bigint "album_id", null: false
   end
 
+  create_table "follows", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "follower_id"
+    t.bigint "followed_user_id"
+  end
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "likeable_type"
+    t.bigint "likeable_id"
+    t.bigint "user_id"
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.index ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", limit: 140, null: false
     t.string "description", limit: 300, null: false
     t.string "sharing_mode", null: false
     t.bigint "user_id", null: false
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
@@ -46,5 +65,6 @@ ActiveRecord::Schema.define(version: 2020_08_21_092546) do
   end
 
   add_foreign_key "albums", "users"
+  add_foreign_key "likes", "users"
   add_foreign_key "photos", "users"
 end
