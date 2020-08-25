@@ -52,12 +52,14 @@ footer {
 }
 
 .heart-btn {
+    outline: none;
     border: none;
     background-color: #f7f7f7;
     color: gray
 }
 
 .heart-btn:hover {
+    outline: none;
     border: none;
     background-color: white;
     color: #3C5999;
