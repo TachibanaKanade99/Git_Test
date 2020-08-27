@@ -13,13 +13,13 @@
 		<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.3.0/dist/bootstrap-toc.min.css">
 		<link rel="stylesheet" href="style.css">
 
-		<title>Fotobook - Edit Photo</title>
+		<title>Fotobook - Admin Edit User Profile</title>
 	</head>
-	<body data-spy="scroll" data-target="#toc">
+	<body data-spy="scroll" data-target="#toc" class="ft-mainpage">
 
 		<nav class="navbar navbar-expand-lg fixed-top navbar-dark ft-navbar">
-			<div class="col-xs-1 col-md-1 offset-md-1 text-center">
-				<a class="navbar-brand ft-name font-weight-bold" href="#">Fotobook</a>
+			<div class="col-xs-1 col-md-2 p-0 text-center">
+				<a class="navbar-brand ft-name font-weight-bold" href="#">Fotobook Admin</a>
 			</div>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,109 +46,67 @@
 			</div>	
 		</nav>
 
-		<div class="container-fluid ft-mainpage">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xs-1 col-md-2 mt-4">
-					<nav class="ft-sticky-top text-center" id="toc" data-toggle="toc">
+				<div class="col-xs-1 col-md-2 mt-5 text-center">
+					<nav class="sticky-top" id="toc" data-toggle="toc">
 						<ul class="nav navbar-nav">
-							<a class="nav-link content-text disabled" href="#">Feeds</a>
+							<a class="nav-link disabled content-text" href="#">Manage Photos</a>
 						</ul>
 	
 						<ul class="nav navbar-nav">
-							<a class="nav-link content-text disabled" href="#">My Photos</a>
+							<a class="nav-link disabled content-text" href="#">Manage Albums</a>
 						</ul>
 	
 						<ul class="nav navbar-nav">
-							<a class="nav-link content-text disabled" href="#">My Albums</a>
+							<a class="nav-link content-text" href="#">Manage Users</a>
 						</ul>
 					</nav>
 				</div>
 				
-				<div class="col-xs-6 col-md-8 bg-white mt-3 hmm">
-
+				<div class="col-xs-6 col-md-8 bg-white mt-3 py-5 hmm">
 					<div class="float-md-right">
 						<button type="button" class="btn btn-sm m-3 px-3 ft-back-btn">Back</button>
 					</div>
 
 					<div class="m-3 font-weight-bolder h5">
-						Edit Photo
+						Edit User Profile
 					</div>
 					<hr>
 
-					<form>
-						<div class="form-row">
-							<div class="form-group col-md-5">
-								<label for="title-label">Title</label>
-								<input type="text" class="form-control" id="title-label" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
-
-								<br>
-
-								<div class="col-md-4 p-0">
-									<label for="sharing-label">Sharing mode</label>
-									<select id="sharing-label" class="form-control">
-									<option selected>Public</option>
-									<option>Private</option>
-								</select>
-								</div>
-
+					<div class="row justify-content-center">
+						<div class="col-xs-1 col-md-2 m-4 p-0">
+							<div class="col-md-12 p-0 w-100 border">
+								<img class="img-fluid ft-imgs" src="5wgCcaI.gif" alt="photo">
 							</div>
-
-							<div class="col-md-1"></div>
-	
-							<div class="form-group col-md-5">
-								<label for="description-label">Description</label>
-								<textarea class="form-control" rows="6" id="description-label"></textarea>
+							
+							<div class="change-btn">
+								<button type="button" class="btn btn-secondary">Change</button>
 							</div>
 						</div>
+					</div>
 
-						<div class="form-row">
-							<div class="col-md-5">
-								<div class="col-xs-1 col-md-6 m-3 p-0 border">
-									
-									<div class="col-md-12 p-0 border">
-										<button type="button" class="close top-right" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-										<img class="img-fluid" src="desktop.jpg" alt="photo">
-									</div>
-									
-									<button class="bottom-right rounded-circle">
-										<i class="fas fa-lock"></i>
-									</button>
-									
-								</div>
-
-								<div class="mt-4">
-									<button type="button" class="ml-4 btn btn-sm btn-success">Save</button>
-
-									<button type="button" class="ml-5 btn btn-sm btn-danger">
-										<i class="far fa-trash-alt"></i>
-										Delete
-									</button>
-								</div>
+					<div class="row justify-content-center">
+						<p class="text-blue font-weight-bold">Basic Information</p>
+						<form>
+							<div class="form-group row">
+							<label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+							<div class="col-sm-10">
+								<input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
 							</div>
-						</div>
+							</div>
+							<div class="form-group row">
+							<label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+							<div class="col-sm-10">
+								<input type="password" class="form-control" id="inputPassword">
+							</div>
+							</div>
+						</form>
+					</div>
 
-						
-
-					</form>
-					
-					<footer>
-						<nav aria-label="Page navigation example">
-							<ul class="pagination m-3 justify-content-center">
-								<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-								<li class="page-item active"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">3</a></li>
-								<li class="page-item"><a class="page-link" href="#">Next</a></li>
-							</ul>
-						</nav>
-					</footer>
-				</div>
-
-				<div class="col-xs-1 col-md-2">
 					
 				</div>
+					
 			</div>
 			
 		</div>
