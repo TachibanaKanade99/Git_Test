@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   namespace :albums do
     resources :photos, only: [:edit, :update, :show, :destory]
   end
+  
+  resources :album
 
   # Non-resourceful
   root 'home#index'
