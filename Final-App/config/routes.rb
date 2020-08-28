@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-
   # Resourceful
 
   # Admin
@@ -22,10 +21,10 @@ Rails.application.routes.draw do
   end
 
   # Non-resourceful
-  root 'home/index'
+  root 'home#index'
+  get 'home/index'
   get '/feed', to: 'home#feed'
   get 'exit', to: 'session#destroy', as: :logout
-
-
+  get '/newest', to: 'home#show'
 
 end
