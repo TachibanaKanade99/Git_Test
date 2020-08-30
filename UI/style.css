@@ -10,6 +10,10 @@
     background-color: #F8F8F8;
 }
 
+nav[data-toggle="toc"] {
+    top: 100px;
+}
+
 .text-blue {
     color: #3C5999;
 }
@@ -217,9 +221,11 @@ footer {
 }
 
 .count_albums {
+    background-color: black;
     left: 20%;
+    right: 20%;
     top: 30%;
-    opacity: 80%;
+    opacity: 40%;
 }
 
 .photo-text {
