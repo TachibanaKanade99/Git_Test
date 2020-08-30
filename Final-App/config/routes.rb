@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get '/feed', to: 'home#feed'
   get 'exit', to: 'session#destroy', as: :logout
+  
   get '/newest', to: 'home#show'
 
 end

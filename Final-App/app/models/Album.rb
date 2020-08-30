@@ -3,6 +3,7 @@ class Album < ApplicationRecord
 
 	validates :title, length: {
 		maximum: 140,
+		minimum: 10,
 		presence: true,
 		too_long: "maximum 140 characters long"
 	}
