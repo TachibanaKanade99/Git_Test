@@ -23,7 +23,7 @@
 				<main class="col-12 col-md-8 bg-white mt-3 hmm">
 
 					<div class="container-fluid text-center font-weight-bolder my-5 ft-center-text">
-						Top 4 Newest Albums
+						Albums
 					</div>
 
 					<div class="row">
@@ -56,12 +56,6 @@
 				</main>
 
 				<div class="col-12 col-md-2"></div>
-				
-				<%= form_with(model: @album, :html => {:id => "edit_form"}) do |album| %>
-					<strong class="px-2"> <%= album.label("Change Album Title") %> </strong>
-					<%= album.text_field :title %>
-					<button class="btn"> <%= album.submit "Change" %> </button>
-				<% end %>
 			</div>
 			
 		</div>

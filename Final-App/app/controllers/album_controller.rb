@@ -2,21 +2,22 @@ class AlbumController < ApplicationController
 	def edit
 		@album = Album.find(params[:id])
 	end
+
+	def show
+	end	
 	
 	def update
 		@new_title = params[:album][:title]
 		@album = Album.find(params[:id])
 		@album.title = @new_title
 		
-		updated = @album.update!(album_params)
-		if updated
-			# flash[:notice] = "Update Successfully"
-			puts updated
-			redirect_to edit_album_path, notice: "Update Successfully"
+		if @album.save
+			flash[:success] = "Update Successfully"
+			# @album.update!(album_params)
+			redirect_to newest_path
 		else 
-			puts updated
-			# flash[:alert] = "Title is two short"
-			redirect_to edit_album_path, alert: "Title is too short"
+			flash[:error] = "Title is too short"
+			redirect_to edit_album_path
 		end
 		
 	end
