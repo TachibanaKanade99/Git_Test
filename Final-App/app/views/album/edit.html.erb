@@ -12,6 +12,7 @@
 		<!-- add after bootstrap.min.css -->
 		<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.3.0/dist/bootstrap-toc.min.css">
 		<%= stylesheet_link_tag 'style' %>
+		
 
 		<title>Albums</title>
 	</head>
@@ -22,12 +23,7 @@
 				<div class="col-12 col-md-2 mt-4"></div>
 				<main class="col-12 col-md-8 bg-white mt-3">
 					<div class="row p-5 justify-content-center">
-
-						<%= form_with model: @album, :html => {:id => "edit_form"} do |a| %>
-						<strong class="px-2"> <%= a.label(:title, "Change Album Title:") %> </strong>
-						<%= a.text_field :title%>
-						<button class="btn font-weight-bold text-danger"> <%= a.submit("Change") %> </button>
-						<% end %>	
+            <%= render "form" %>
 					</div>
 
 					<% flash.each do |type, msg| %>
@@ -35,25 +31,6 @@
 							<%= msg %>
 						</div>
 					<% end %>
-
-					<script>
-						$(document).ready(function() {
-							var form = $("#edit_form");
-							form.validate({
-								rules: {
-									"album[title]": {
-										required: true
-									}
-								},
-								messages: {
-									"album[title]": "Title cannot be empty"
-								},
-								errorPlacement: function(error, element){
-									error.appendTo($(element).next())
-								}
-							});
-						});
-					</script>
 
 					<div class="row p-5"></div>
 				</main>
@@ -81,5 +58,6 @@
 		<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.3.0/dist/bootstrap-toc.min.js"></script>
 
 		<%# <script src="src.js"></script> %>
+		<%= javascript_include_tag 'src' %>
 	</body>
 </html>
