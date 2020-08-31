@@ -11,10 +11,10 @@ class AlbumController < ApplicationController
 		@album = Album.find(params[:id])
 		@album.title = @new_title
 		
-		if @album.save
-			flash[:success] = "Update Successfully"
+		if @album.update(album_params)
+			flash[:notice] = "Update Successfully"
 			# @album.update!(album_params)
-			redirect_to newest_path
+			# redirect_to newest_path
 		else 
 			flash[:error] = "Title is too short"
 			redirect_to edit_album_path

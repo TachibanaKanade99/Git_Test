@@ -25,7 +25,7 @@
 
 						<%= form_with model: @album, :html => {:id => "edit_form"} do |a| %>
 						<strong class="px-2"> <%= a.label(:title, "Change Album Title:") %> </strong>
-						<%= a.text_field :title, required: true %>
+						<%= a.text_field :title%>
 						<button class="btn font-weight-bold text-danger"> <%= a.submit("Change") %> </button>
 						<% end %>	
 					</div>
@@ -37,14 +37,17 @@
 					<% end %>
 
 					<script>
-						$(document).ready(function(){
+						$(document).ready(function() {
 							var form = $("#edit_form");
 							form.validate({
-								// rules: {
-								// 	album[title]: {
-								// 		required: true
-								// 	}
-								// },
+								rules: {
+									"album[title]": {
+										required: true
+									}
+								},
+								messages: {
+									"album[title]": "Title cannot be empty"
+								},
 								errorPlacement: function(error, element){
 									error.appendTo($(element).next())
 								}
