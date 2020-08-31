@@ -227,8 +227,13 @@ footer {
 }
 
 .ft-profile-img {
-    height: 120px;
-    width: 120px;
+    height: 130px;
+    width: 130px;
+}
+
+.follower-profile {
+    height: 80px;
+    width: 80px
 }
 
 .count_albums {
