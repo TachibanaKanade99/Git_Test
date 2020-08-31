@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Google Roboto Font -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<!-- add after bootstrap.min.css -->
+		<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.3.0/dist/bootstrap-toc.min.css">
+		<link rel="stylesheet" href="style.css">
+
+		<title>Fotobook - Edit User Profile</title>
+	</head>
+	<body data-spy="scroll" data-target="#toc" class="ft-mainpage">
+
+		<nav class="navbar navbar-expand-lg fixed-top navbar-dark ft-navbar">
+			<div class="col-xs-1 col-md-2 p-0 text-center">
+				<a class="navbar-brand ft-name font-weight-bold" href="#">Fotobook</a>
+			</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="col-md-5 mr-auto px-0">
+					<div class="input-group input-group-sm">
+						<input class="form-control" type="search" role="search" placeholder="Search Photo / Album" aria-label="Search">
+					</div>
+				</div>
+				
+				<div class="col-xs-6 col-md-1 text-center">
+					<a class="navbar-brand" href="#">
+						<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
+						<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+					</a>
+				</div>
+	
+				<div class="col-xs-6 col-md-2 text-center">
+					<a class="navbar-brand font-weight-bold ft-login" href="#">Logout</a>
+				</div>
+			</div>	
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-1 col-md-2 mt-5 text-center">
+					<nav class="sticky-top" id="toc" data-toggle="toc">
+						<ul class="nav navbar-nav">
+							<a class="nav-link disabled content-text" href="#">Feeds</a>
+						</ul>
+	
+						<ul class="nav navbar-nav">
+							<a class="nav-link disabled content-text" href="#">Discover</a>
+						</ul>
+					</nav>
+				</div>
+				
+				<div class="col-xs-6 col-md-8 bg-white mt-3 py-5 hmm">
+					<!-- <div class="float-md-right">
+						<button type="button" class="btn btn-sm m-3 px-3 ft-back-btn">Back</button>
+					</div> -->
+
+					<div class="m-3 font-weight-bolder h5">
+						Edit User Profile
+					</div>
+					<hr>
+
+					<div class="row justify-content-center">
+						<div class="col-xs-1 col-md-2 m-4 p-0">
+							<div class="col-md-12 p-0 w-100 border">
+								<img class="img-fluid ft-imgs" src="5wgCcaI.gif" alt="photo">
+							</div>
+							
+							<div class="change-btn">
+								<button type="button" class="btn btn-secondary">Change</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-12 col-md-6 text-center">
+							<p class="text-blue font-weight-bold">Basic Information</p>
+
+							<form>
+								<div class="form-group row">
+									<div class="col-md-1"></div>
+									<label for="firstname" class="col-12 col-md-2 col-form-label font-weight-bold px-0 ml-3 text-left">First Name</label>
+									<div class="col-12 col-md-7">
+										<input type="text" class="form-control" id="firstname" placeholder="First Name">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-1"></div>
+									<label for="lastname" class="col-12 col-md-2 col-form-label font-weight-bold px-0 ml-3 text-left">Last Name</label>
+									<div class="col-12 col-md-7">
+										<input type="text" class="form-control" id="lastname" placeholder="Last Name">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-md-1"></div>
+									<label for="email" class="col-12 col-md-2 col-form-label font-weight-bold px-0 ml-3 text-left">Email</label>
+									<div class="col-12 col-md-7">
+										<input type="text" class="form-control" id="email" placeholder="someone@example.com">
+									</div>
+								</div>
+							
+								<button type="button" class="btn btn-success">Save</button>
+							</form>
+						</div>
+						<div class="col-md-3"></div>
+						
+					</div>
+
+					<br>
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-12 col-md-6 text-center">
+							<p class="text-blue font-weight-bold">Password</p>
+
+							<form>
+								<div class="form-group row">
+									<label for="current_pass" class="col-12 col-md-3 col-form-label font-weight-bold px-0 ml-3 text-left">Current Password</label>
+									<div class="col-12 col-md-7">
+										<input type="password" class="form-control" id="current_pass" placeholder="*****">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="new_pass" class="col-12 col-md-3 col-form-label font-weight-bold px-0 ml-3 text-left">New Password</label>
+									<div class="col-12 col-md-7">
+										<input type="password" class="form-control" id="new_pass" placeholder="*****">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label for="pass_confirm" class="col-12 col-md-3 col-form-label font-weight-bold px-0 ml-3 text-left">Password Confirm</label>
+									<div class="col-12 col-md-7">
+										<input type="password" class="form-control" id="pass_confirm" placeholder="*****">
+									</div>
+								</div>
+								
+								<button type="button" class="btn btn-success">Save</button>
+							</form>
+						</div>
+						<div class="col-md-3"></div>
+						
+					</div>
+
+					
+				</div>
+					
+			</div>
+			
+		</div>
+		
+	
+
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/1fb1fb2be8.js" crossorigin="anonymous"></script>
+
+		<!-- Optional JavaScript -->
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<!-- add after bootstrap.min.js -->
+		<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.3.0/dist/bootstrap-toc.min.js"></script>
+
+		<script src="src.js"></script>
+	</body>
+</html>
