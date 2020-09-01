@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_044652) do
+ActiveRecord::Schema.define(version: 2020_09_01_074237) do
 
   create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", limit: 140, null: false
@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 2020_08_25_044652) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "first_name", limit: 25, default: "Tuan", null: false
     t.string "last_name", limit: 25, default: "Minh", null: false
-    t.string "email", null: false
-    t.string "password", limit: 64, null: false
+    t.string "email"
+    t.string "password", limit: 64, default: "1234", null: false
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["first_name"], name: "index_users_on_first_name"
