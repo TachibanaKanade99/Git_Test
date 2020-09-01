@@ -1,0 +1,9 @@
+<%= form_with model: @user, local: true, :html => {:id => "signup_form"} do |u| %>
+<strong class="px-2"> <%= u.label(:first_name, "First Name:") %> </strong>
+  	<%= u.text_field :first_name, :value => "", :placeholder => "Enter First Name"%>
+	<%= u.text_field :last_name, :value => "", :placeholder => "Enter Last Name"%>
+	<%= u.text_field :email, :value => "", :placeholder => "Enter Email"%>
+	<%= u.password_field :password, :value => "", :placeholder => "Enter Password"%>
+
+  <button class="btn font-weight-bold text-danger"> <%= u.submit("Signup") %> </button>
+<% end %>

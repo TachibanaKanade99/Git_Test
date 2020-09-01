@@ -21,7 +21,6 @@ class User < ApplicationRecord
 		message: "this email has already been taken"
 	},
 	email: true # for validate email
-
 	validates :password, length: {
 		maximum: 64,
 		presence: true,
@@ -42,4 +41,5 @@ class User < ApplicationRecord
 
 	# User has many likes
 	has_many :likes, dependent: :destroy
+
 end
