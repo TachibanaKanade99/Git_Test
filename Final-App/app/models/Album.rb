@@ -22,7 +22,7 @@ class Album < ApplicationRecord
 
 	def check_description
 		unless description.present?
-			self.description = "This is album of user has id #{user_id}"
+			self.description = "This is albums of users has id #{user_id}"
 		end		
 	end
 
