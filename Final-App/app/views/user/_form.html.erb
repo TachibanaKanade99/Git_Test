@@ -1,9 +1,17 @@
-<%= form_with model: @user, local: true, :html => {:id => "signup_form"} do |u| %>
-<strong class="px-2"> <%= u.label(:first_name, "First Name:") %> </strong>
-  	<%= u.text_field :first_name, :value => "", :placeholder => "Enter First Name"%>
-	<%= u.text_field :last_name, :value => "", :placeholder => "Enter Last Name"%>
-	<%= u.text_field :email, :value => "", :placeholder => "Enter Email"%>
-	<%= u.password_field :password, :value => "", :placeholder => "Enter Password"%>
+<%= form_with model: @user, local: true, :html => {:class => "form-signin"} do |u| %>
+	<%= u.label :first_name, "First Name:", :class => "font-weight-bold" %>
+  	<%= u.text_field :first_name, :value => "", :placeholder => "Enter First Name", :class => "form-control", required: 'true'%>
 
-  <button class="btn font-weight-bold text-danger"> <%= u.submit("Signup") %> </button>
+	<%= u.label :last_name, "Last Name:", :class => "font-weight-bold" %>
+	<%= u.text_field :last_name, :value => "", :placeholder => "Enter Last Name", :class => "form-control", required: 'true'%>
+
+	<%= u.label :email, "Email:", :class => "font-weight-bold" %>
+	<%= u.text_field :email, :value => "", :placeholder => "Enter Email", :class => "form-control", required: 'true'%>
+
+	<%= u.label :password, "Password:", :class => "font-weight-bold" %>
+	<%= u.password_field :password, :value => "", :placeholder => "Enter Password", :class => "form-control", required: 'true'%>
+
+	<div class="text-center">
+		<%= u.submit "Signup", :class => "mt-2 mb-2 btn text-light login-btn" %>
+	</div>
 <% end %>

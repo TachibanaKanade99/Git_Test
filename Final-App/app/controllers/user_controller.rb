@@ -6,12 +6,15 @@ class UserController < ApplicationController
 		@user = User.create(user_params)
 		save = @user.save
 		if save
-			UserMailer.with(user: @user).welcome_email.deliver_now
-			redirect_to home_index_path
+			UserMailer.with(user: @user).welcome_email.deliver_later
+			render "show"
 		else
 			puts @user.errors.messages
 			redirect_to user_index_path
 		end
+	end
+
+	def show
 	end
 
 	private
