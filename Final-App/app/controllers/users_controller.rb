@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 	def new
 		@user = User.new
 	end
@@ -8,10 +8,11 @@ class UserController < ApplicationController
 		save = @user.save
 		if save
 			UserMailer.with(user: @user).welcome_email.deliver_later
-			render "show"
+			render 'show'
 		else
+			puts @user.email
 			puts @user.errors.messages
-			redirect_to user_index_path
+			redirect_to root_path
 		end
 	end
 
@@ -20,6 +21,6 @@ class UserController < ApplicationController
 
 	private
 		def user_params
-			params.permit(:first_name, :last_name, :email, :password)
+			params.require(:user).permit(:first_name, :last_name, :email, :password)
 		end
 end

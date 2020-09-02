@@ -20,14 +20,16 @@ Rails.application.routes.draw do
     resources :photos, only: [:edit, :update, :show, :destory]
   end
   
-  resources :album
-  resources :user
+  resources :albums
+  resources :users, only: [:new, :create, :show]
 
   # Non-resourceful
-  root 'home#index'
-  get 'home/index'
-  get '/feed', to: 'home#feed'
-  get '/exit', to: 'session#destroy', as: :logout
-  get '/newest', to: 'home#show'
+  # Signup
+  root 'users#new'
+  # post 'users/new', to: 'users#create'
+  #Signin
+
+
+  # get '/exit', to: 'session#destroy', as: :logout
 
 end

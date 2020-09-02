@@ -1,4 +1,4 @@
-class AlbumController < ApplicationController
+class AlbumsController < ApplicationController
 	before_action :getAlbum, only: [:edit, :update]
 
 	def getAlbum
