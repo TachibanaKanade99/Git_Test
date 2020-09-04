@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(card-img).bind("click", function (){
-		$(this.#photo-modal).modal("show");
+	$(".card-img").bind("click", function (){
+		$("#photo-modal").modal("show");
 	});
 });

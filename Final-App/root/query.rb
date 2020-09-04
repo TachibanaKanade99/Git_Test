@@ -13,7 +13,7 @@ following_users = user.followings
 following_photos = []
 following_albums = []
 
-following_users.each do |user| following_photos += Photo.joins(:user).where("photos.user_id = ?", user.id) end
+following_users.each do |user| following_photos += Photo.order(created_at: :desc).joins(:user).where("photos.user_id = ?", user.id) end
 
 following_users.each do |user| following_albums += Album.joins(:user).where("albums.user_id = ?", user.id) end
 

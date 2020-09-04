@@ -35,13 +35,13 @@
 
 		<div class="col-xs-6 col-md-1 text-center">
 			<a class="navbar-brand" href="#">
-				<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
-				<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
+				<%= image_tag("tuanminh.png", class: "img-fluid rounded-circle ft-avatar") %>
+				<span class="font-weight-bold ft-login" href="#"> <%= @user.first_name %> <%=@user.last_name %> </span>
 			</a>
 		</div>
 
 		<div class="col-xs-6 col-md-2 text-center">
-			<a class="navbar-brand font-weight-bold ft-login" href="#">Logout</a>
+			<%= link_to("Logout", root_path, class: "navbar-brand font-weight-bold ft-login") %>
 		</div>
 	</div>
 </nav>
@@ -51,20 +51,12 @@
 		<div class="col-xs-1 col-md-2 mt-5">
 			<nav class="sticky-top text-center" id="toc" data-toggle="toc">
 				<ul class="nav navbar-nav">
-					<a class="nav-link disabled content-text" href="#">Feeds</a>
+					<button type="button" class="btn shadow-none content-text content-text-active">Feeds</button>
 				</ul>
 
 				<ul class="nav navbar-nav">
-					<a class="nav-link content-text" href="#">Discovers</a>
+					<button type="button" class="btn shadow-none content-text">Discovery</button>
 				</ul>
-
-				<!-- <ul class="nav navbar-nav">
-					<a class="nav-link content-text" href="#">My Photos</a>
-				</ul>
-
-				<ul class="nav navbar-nav">
-					<a class="nav-link content-text" href="#">My Albums</a>
-				</ul> -->
 			</nav>
 		</div>
 
@@ -80,148 +72,8 @@
 					</button>
 				</div>
 			</div>
-
-			<!-- Photo Modal -->
-			<div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog modal-lg" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="photo-modal">Nam tempor posuere faucibus</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<img class="img-fluid card-img" src="desktop.jpg" alt="Card image cap">
-						</div>
-						<div class="modal-footer">
-							<p>Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-xs-3 col-md-6 p-3">
-					<div class="card border-light">
-						<div class="row py-0 card-body">
-							<img class="col-xs-3 col-md-6 p-0 img-fluid img-thumbnail card-img" data-toggle="modal" data-target="#photo-modal" src="desktop.jpg" alt="Card image cap">
-							<div class="col-xs-3 col-md-6">
-								<div class="card-title">
-									<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
-									<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
-									<button type="button" class="offset-md-2 btn active-follow follow-btn">following</button>
-									<p><strong>Nam tempor posuere faucibus</strong></p>
-								</div>
-								<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
-								<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
-								<span class="like-numbers">112</span>
-								<span class="offset-md-3 font-italic ft-date">4:56 pm 01/04/2018</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-6 p-3">
-					<div class="card border-light">
-						<div class="row py-0 card-body">
-							<img class="col-xs-3 col-md-6 p-0 img-fluid img-thumbnail card-img" data-toggle="modal" data-target="#photo-modal" src="desktop.jpg" alt="Card image cap">
-							<div class="col-xs-3 col-md-6">
-								<div class="card-title">
-									<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
-									<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
-									<button type="button" class="offset-md-3 btn  follow-btn">follow</button>
-									<p><strong>Nam tempor posuere faucibus</strong></p>
-								</div>
-								<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
-								<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
-								<span class="like-numbers">112</span>
-								<span class="offset-md-3 font-italic ft-date">4:56 pm 01/04/2018</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-6 p-3">
-					<div class="card border-light">
-						<div class="row py-0 card-body">
-							<img class="col-xs-3 col-md-6 p-0 img-fluid img-thumbnail card-img" data-toggle="modal" data-target="#photo-modal" src="desktop.jpg" alt="Card image cap">
-							<div class="col-xs-3 col-md-6">
-								<div class="card-title">
-									<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
-									<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
-									<button type="button" class="offset-md-2 btn active-follow follow-btn">following</button>
-									<p><strong>Nam tempor posuere faucibus</strong></p>
-								</div>
-								<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
-								<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
-								<span class="like-numbers">112</span>
-								<span class="offset-md-3 font-italic ft-date">4:56 pm 01/04/2018</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-6 p-3">
-					<div class="card border-light">
-						<div class="row py-0 card-body">
-							<img class="col-xs-3 col-md-6 p-0 img-fluid img-thumbnail card-img" data-toggle="modal" data-target="#photo-modal" src="desktop.jpg" alt="Card image cap">
-							<div class="col-xs-3 col-md-6">
-								<div class="card-title">
-									<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
-									<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
-									<button type="button" class="offset-md-3 btn  follow-btn">follow</button>
-									<p><strong>Nam tempor posuere faucibus</strong></p>
-								</div>
-								<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
-								<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
-								<span class="like-numbers">112</span>
-								<span class="offset-md-3 font-italic ft-date">4:56 pm 01/04/2018</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-6 p-3">
-					<div class="card border-light">
-						<div class="row py-0 card-body">
-							<img class="col-xs-3 col-md-6 p-0 img-fluid img-thumbnail card-img" data-toggle="modal" data-target="#photo-modal" src="desktop.jpg" alt="Card image cap">
-							<div class="col-xs-3 col-md-6">
-								<div class="card-title">
-									<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
-									<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
-									<button type="button" class="offset-md-3 btn  follow-btn">follow</button>
-									<p><strong>Nam tempor posuere faucibus</strong></p>
-								</div>
-								<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
-								<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
-								<span class="like-numbers">112</span>
-								<span class="offset-md-3 font-italic ft-date">4:56 pm 01/04/2018</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-3 col-md-6 p-3">
-					<div class="card border-light">
-						<div class="row py-0 card-body">
-							<img class="col-xs-3 col-md-6 p-0 img-fluid img-thumbnail card-img" data-toggle="modal" data-target="#photo-modal" src="desktop.jpg" alt="Card image cap">
-							<div class="col-xs-3 col-md-6">
-								<div class="card-title">
-									<img class="img-fluid rounded-circle ft-avatar" src="tuanminh.png" alt="user-avatar">
-									<span class="font-weight-bold ft-login" href="#">Tuan Minh</span>
-									<button type="button" class="offset-md-2 btn active-follow follow-btn">following</button>
-									<p><strong>Nam tempor posuere faucibus</strong></p>
-								</div>
-								<p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
-								<span><button class="heart-btn px-0" ><i class="fas fa-heart"></i></button></span>
-								<span class="like-numbers">112</span>
-								<span class="offset-md-3 font-italic ft-date">4:56 pm 01/04/2018</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<%#= render "feed_photos" %>
+			<%= render "feed_albums" %>
 
 			<div class="d-flex justify-content-center">
 				<div class="spinner-border" role="status">

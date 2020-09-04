@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
 	helper_method :logged
 
 	# Check for current user:
-	def currentUser
-		User.find_by(id: @user.id)
+	def currentUser(user)
+		User.find_by(user.id)
 	end
 
 	# Check if user loged in or not

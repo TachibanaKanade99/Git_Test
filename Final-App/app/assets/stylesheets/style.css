@@ -11,11 +11,16 @@
 }
 
 nav[data-toggle="toc"] {
-    top: 100px;
+    top: 130px;
 }
 
 .text-blue {
     color: #3C5999;
+}
+
+.card-img {
+	height: 300px;
+	width: 200px;
 }
 
 a.disabled {
@@ -186,6 +191,12 @@ footer {
 }
 
 .content-text {
+	color: gray;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.content-text:hover, .content-text-active {
     color: #3C5999;
     font-size: 14px;
     font-weight: bold;

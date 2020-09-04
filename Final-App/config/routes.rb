@@ -25,11 +25,10 @@ Rails.application.routes.draw do
 
   # Non-resourceful
   # Signup
-  root 'users#new'
+  # root 'users#new'
   # post 'users/new', to: 'users#create'
   #Signin
-
-
+  root 'home#create'
   # get '/exit', to: 'session#destroy', as: :logout
 
 end
