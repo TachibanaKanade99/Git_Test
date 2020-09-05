@@ -1,6 +1,8 @@
 class Photo < ApplicationRecord
+	#mount image
+	mount_uploader :image, ImageUploader
 
-	# Active Record Validation
+	# Active Record Validationdat
 
 	validates :title, length: {
 		maximum: 140,

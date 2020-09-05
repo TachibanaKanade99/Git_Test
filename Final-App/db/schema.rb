@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_074237) do
+ActiveRecord::Schema.define(version: 2020_09_04_074719) do
 
   create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "title", limit: 140, null: false
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_074237) do
     t.bigint "user_id", null: false
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.string "image"
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 

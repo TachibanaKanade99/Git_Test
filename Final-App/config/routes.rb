@@ -12,16 +12,14 @@ Rails.application.routes.draw do
   resources :users do
     resources :albums
     resources :photos
-    resources :likes
   end
 
   # Albums
-  namespace :albums do
-    resources :photos, only: [:edit, :update, :show, :destory]
-  end
-  
+  # namespace :albums do
+  #   resources :photos, only: [:edit, :update, :show, :destory]
+  # end
   resources :albums
-  resources :users, only: [:new, :create, :show]
+  # resources :users, only: [:new, :create, :show]
 
   # Non-resourceful
   # Signup

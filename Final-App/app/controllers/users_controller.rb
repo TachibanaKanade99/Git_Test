@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	before_action :find_user, only: [:edit, :show]
+
 	def new
 		@user = User.new
 	end
@@ -18,12 +20,9 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-
 	end
 
 	def show
-		@user = User.find(params[:id])
-
 		#Get following users
 		@following_users = @user.followings
 
@@ -36,7 +35,10 @@ class UsersController < ApplicationController
 
 		@following_users.each do |user| @following_albums += Album.joins(:user).where("albums.user_id = ? AND albums.sharing_mode = ?", user.id, "public") end
 		@following_albums = @following_albums.sort_by(&:created_at).reverse
+	end
 
+	def find_user
+		@user = User.find(params[:id])
 	end
 
 	private
