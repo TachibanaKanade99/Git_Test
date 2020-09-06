@@ -84,10 +84,24 @@ footer {
 }
 
 .photo-btn {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	height: 200px;
+	width: 200px;
     background-color: #f7f7f7;
     color: gray;
     border: 2px dashed gray;
     padding: 50px;
+}
+
+.file-input {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
 }
 
 .follow-btn {

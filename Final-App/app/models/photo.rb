@@ -17,7 +17,6 @@ class Photo < ApplicationRecord
 	}
 
 	validates :sharing_mode, inclusion: {in: %w(public private)}, presence: true
-
 	# Active Record Callback
 
 	before_save :check_description
