@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<%= stylesheet_link_tag 'style' %>
 
-	<title>Fotobook - Login</title>
+	<title></title>
 </head>
 <body>
 
@@ -31,9 +31,14 @@
 			</div>
 		</div>
 
+<!--		<div class="col-xs-6 col-md-2 text-center">-->
+<!--			<a class="navbar-brand font-weight-bold ft-login" href="#">Login</a>-->
+<!--		</div>-->
+
 		<div class="col-xs-6 col-md-2 text-center">
-			<a class="navbar-brand font-weight-bold ft-login" href="#">Login</a>
+			<%= link_to("Signup", new_registration_path(resource_name), class: "navbar-brand font-weight-bold ft-login") %>
 		</div>
+
 	</div>
 </nav>
 
@@ -59,47 +64,29 @@
 
 			</div>
 			<div class="account-wall">
-				<img class="profile-img mt-4" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
-					 alt="">
-<!--				<form class="form-signin">-->
-<!--					<input type="text" class="form-control" placeholder="Email" required autofocus>-->
+				<img class="profile-img mt-4" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="">
 
+				<%= form_for(resource, as: resource_name, url: session_path(resource_name), local: true, :html => {:class => "form-signin"}) do |u| %>
+					<%= u.email_field :email, autofocus: true, autocomplete: "email", value: "", placeholder: "Email", class: "form-control"%>
 
-<!--					<input type="password" class="form-control" placeholder="Password" required>-->
+					<br>
+					<%= u.password_field :password, autocomplete: "current-password", value: "", placeholder: "Password", class: "form-control"%>
 
-<!--					<div class="text-center">-->
-<!--						<button class="mt-2 mb-2 btn text-light login-btn" type="submit">Login</button>-->
-
-<!--						<a href="#" class="new-account">Forgot password?</a>-->
-<!--					</div>-->
-<!--				</form>-->
-				<%#= form_with model: @user, local: true, class: "form-signin" do |u| %>
-					<%#= u.text_field :email, value: "", placeholder: "Email", class: "form-control", required: 'true'%>
-					<%#= u.password_field :password, value: "", placeholder: "Password", class: "form-control", required: 'true'%>
-<!--					<div class="text-center">-->
-						<%#= u.submit "Login", class: "mt-2 mb-2 btn text-light login-btn" %>
-<!--					</div>-->
-				<%# end %>
-				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |u| %>
-					<%= u.email_field :email, autofocus: true, autocomplete: "email", value: "", placeholder: "Email", class: "form-control", required: 'true'%>
-					<%= u.password_field :password, autocomplete: "current-password", value: "", placeholder: "Password", class: "form-control", required: 'true'%>
-
+					<br>
 					<% if devise_mapping.rememberable? %>
-						<div class="field">
-							<%= f.check_box :remember_me %>
-							<%= f.label :remember_me %>
-						</div>
+						<%= u.check_box :remember_me, class: "form-check-input ml-2", type: "checkbox"%>
+						<%= u.label :remember_me, class: "form-check-label ml-4"%>
 					<% end %>
 
 					<div class="text-center">
-						<%= u.submit "Login", class: "mt-2 mb-2 btn text-light login-btn" %>
+						<%= u.submit "Login", class: "mt-2 btn text-light login-btn" %>
 					</div>
 				<% end %>
 
-				<%= render "users/shared/links" %>
-
+				<%#= render "users/shared/links" %>
+				<%= link_to("Forgot password?", new_password_path(resource_name), class: "text-center new-account mb-1")%>
 			</div>
-			<%= link_to("Create an account", new_registration_path(resource_name), class: "text-center new-account") %>
+			<%= link_to("Create an account", new_registration_path(resource_name), class: "text-center new-account")%>
 		</div>
 	</div>
 </div>
@@ -110,6 +97,10 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- JQuery Validate -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <%=javascript_include_tag 'src' %>

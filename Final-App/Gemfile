@@ -25,6 +25,8 @@ gem 'redis', '~> 3.2', '>= 3.2.1'
 gem 'kaminari'
 # Upload using Carrierwave
 gem 'carrierwave', '~> 2.0'
+# Signin/Signup using Devise
+gem 'devise'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

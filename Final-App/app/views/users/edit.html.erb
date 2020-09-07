@@ -69,7 +69,7 @@
 				<div class="col-7 col-md- p-0">
 					<span class="badge badge-pill badge-warning text-white font-weight-bold px-3 pt-1 mt-4 ml-1">Following</span>
 					<a href="#">
-						<p class="pt-3 pl-2 h1 text-dark font-weight-bolder">Tuan Minh</p>
+						<p class="pt-3 pl-2 h1 text-dark font-weight-bolder"> <%= User.find(params[:id]).first_name%> <%= User.find(params[:id]).last_name%></p>
 					</a>
 
 					<div class="row px-3">

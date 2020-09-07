@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_action :find_user, only: [:edit, :show]
+	before_action :authenticate_user!, :find_user, only: [:edit, :show]
 
 	def new
 		@user = User.new
@@ -35,6 +35,10 @@ class UsersController < ApplicationController
 
 		@following_users.each do |user| @following_albums += Album.joins(:user).where("albums.user_id = ? AND albums.sharing_mode = ?", user.id, "public") end
 		@following_albums = @following_albums.sort_by(&:created_at).reverse
+	end
+
+	def destroy
+		redirect_to root_path
 	end
 
 	def find_user

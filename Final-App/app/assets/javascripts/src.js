@@ -1,18 +1,45 @@
 $(document).ready(function() {
-	// var form = $("#edit_form");
-	// form.validate({
-	// 	rules: {
-	// 		"album[title]": {
-	// 			required: true
-	// 		}
-	// 	},
-	// 	messages: {
-	// 		"album[title]": "Title cannot be empty"
-	// 	},
-	// 	errorPlacement: function(error, element){
-	// 		error.appendTo($(element).next())
-	// 	}
-	// });
+	var form = $(".form-signin");
+	form.validate({
+		rules: {
+			"user[first_name]": {
+				required: true
+			},
+            "user[last_name]": {
+                required: true
+            },
+            "user[email]": {
+                required: true
+            },
+            "user[password]": {
+                required: true
+            },
+            "user[password_confirmation]": {
+                required: true
+            },
+		},
+		messages: {
+			"user[first_name]": {
+                required: "First Name cannot be empty"
+            },
+            "user[last_name]": {
+                required: "Last Name cannot be empty"
+            },
+            "user[email]": {
+                required: "Email cannot be empty"
+            },
+            "user[password]": {
+                required: "Password cannot be empty"
+            },
+            "user[password_confirmation]": {
+                required: "Reenter your password!!!",
+                equalTo: "Your password is not the same!"
+            },
+		},
+		// errorPlacement: function(error, element){
+		// 	error.appendTo($(element).next())
+		// }
+	});
 
     //Photo Modal
     $(".card-img").bind("click", function (){
@@ -53,8 +80,8 @@ $(document).ready(function() {
     selected_btn.on({
         click: function () {
             $(this).addClass("active");
-            // console.log($(this).text());
-            // console.log(selected_btn.not(this));
+            console.log($(this).text());
+            console.log(selected_btn.not(this));
             if (selected_btn.not(this).hasClass("active")) {
                 selected_btn.not(this).removeClass("active");
             }

@@ -5,9 +5,7 @@ class HomeController < ApplicationController
   def create
   end
 
-  def show
-    # @albums = Album.order(created_at: :desc).limit(4)
-    # @photos = Photo.all
+def show
   end
   
 end

@@ -17,6 +17,8 @@ following_users.each do |user| following_photos += Photo.order(created_at: :desc
 
 following_users.each do |user| following_albums += Album.joins(:user).where("albums.user_id = ?", user.id) end
 
+# Add user followings
+user.followings.push(User.find(1))
 
 # Get Author information (name and avatar)
 
